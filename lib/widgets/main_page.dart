@@ -12,13 +12,24 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  List pages = [HomePage(), SettingsPage(), TrackerPage()];
+  List pages = [HomePage(), TrackerPage(), SettingsPage()];
+
+  int currentIndex = 0;
+
+  void onTap(int index) {
+    setState(() {
+      currentIndex = index;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: pages[0],
+        body: pages[currentIndex],
         bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: Colors.grey[800],
+          onTap: onTap,
+          currentIndex: currentIndex,
           items: const [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
             BottomNavigationBarItem(icon: Icon(Icons.alarm), label: "Trackers"),

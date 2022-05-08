@@ -1,4 +1,3 @@
-import 'package:crypto_tracker/widgets/home_page.dart';
 import 'package:crypto_tracker/widgets/main_page.dart';
 import 'package:flutter/material.dart';
 
