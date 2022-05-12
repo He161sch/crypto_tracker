@@ -1,3 +1,3 @@
-import 'package:myapp/backend/home/HomeBackendService.dart';
+import 'package:crypto_tracker/backend/home/HomeBackendService.dart';
 
 abstract class ApiServiceAggregator implements HomeBackendService {}
