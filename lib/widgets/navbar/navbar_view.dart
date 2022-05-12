@@ -9,8 +9,7 @@ class NavbarView extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final NavbarController controller =
-        ref.read(providers.navbarControllerProvider.notifier);
+    final NavbarController controller = ref.read(providers.navbarControllerProvider.notifier);
     final NavbarModel model = ref.watch(providers.navbarControllerProvider);
 
     return Scaffold(
@@ -21,8 +20,8 @@ class NavbarView extends ConsumerWidget {
           currentIndex: model.currentIndex,
           items: const [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-            BottomNavigationBarItem(icon: Icon(Icons.alarm), label: "Trackers"),
-            BottomNavigationBarItem(icon: Icon(Icons.settings), label: "Settings")
+            BottomNavigationBarItem(icon: Icon(Icons.settings), label: "Settings"),
+            BottomNavigationBarItem(icon: Icon(Icons.person), label: "Portfolio")
           ],
         ));
   }
