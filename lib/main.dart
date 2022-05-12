@@ -1,4 +1,4 @@
-import 'package:crypto_tracker/widgets/main_page.dart';
+import 'package:crypto_tracker/widgets/navbar/navbar_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const ProviderScope(
       child: MaterialApp(
-      home: MainPage(),
+      home: NavbarView(),
     ));
   }
 }
