@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends ConsumerWidget {
   const HomePage({Key? key}) : super(key: key);
 
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
+@override
+  Widget build(BuildContext context, WidgetRef ref) {
+    conroller = ref.read..
+    model = ref.watch
 
-class _HomePageState extends State<HomePage> {
-  @override
-  Widget build(BuildContext context) {
+
+
     return Scaffold(
       body: Stack(children: <Widget>[
         Container(
@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
                             color: Colors.white,
                             fontSize: 36,
                             fontWeight: FontWeight.bold)),
-                    Text("January 5",
+                    Text(model.month,
                         style: TextStyle(
                             color: Colors.grey[500],
                             fontSize: 24,
@@ -48,4 +48,9 @@ class _HomePageState extends State<HomePage> {
       ]),
     );
   }
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
+  
 }
