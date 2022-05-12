@@ -2,26 +2,17 @@ import 'package:crypto_tracker/widgets/navbar/navbar_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../home/home_page.dart';
 import '../providers.dart';
-import '../settings_page.dart';
-import '../watchlist/watchlist_view.dart';
 
 class NavbarView extends ConsumerWidget {
   const NavbarView({Key? key}) : super(key: key);
 
-  // static const List pages = [HomePage(), WatchlistView(), SettingsPage()];
-  // Widget get home => const HomePage();
-  // Widget get watchlist => const WatchlistView();
-  // Widget get settings => const SettingsPage();
-
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final NavbarController controller = ref.read(providers.navbarControllerProvider.notifier);
+    final NavbarController controller =
+        ref.read(providers.navbarControllerProvider.notifier);
     final NavbarModel model = ref.watch(providers.navbarControllerProvider);
 
-
-    // List pages = [home, watchlist, settings];
     return Scaffold(
         body: model.pages[model.currentIndex],
         bottomNavigationBar: BottomNavigationBar(
