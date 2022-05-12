@@ -1,8 +1,8 @@
+import 'package:crypto_tracker/widgets/home/home_page.dart';
 import 'package:crypto_tracker/widgets/settings_page.dart';
-import 'package:crypto_tracker/widgets/tracker_page.dart';
+import 'package:crypto_tracker/widgets/watchlist/watchlist_view.dart';
 import 'package:flutter/material.dart';
 
-import 'home_page.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -12,7 +12,7 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  List pages = [HomePage(), TrackerPage(), SettingsPage()];
+  List pages = [HomePage(), WatchlistView(), SettingsPage()];
 
   int currentIndex = 0;
 
