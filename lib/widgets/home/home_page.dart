@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:crypto_tracker/widgets/common/providers.dart';
+import 'package:crypto_tracker/widgets/home/home_model.dart';
+import 'package:crypto_tracker/backend/ui-kit/currency.dart';
 
 class HomePage extends ConsumerWidget {
   const HomePage({Key? key}) : super(key: key);
 
-@override
+  @override
   Widget build(BuildContext context, WidgetRef ref) {
-    conroller = ref.read..
-    model = ref.watch
-
-
+    final HomeController controller =
+        ref.read(providers.homeControllerProvider.notifier);
+    final HomeModel model = ref.watch(providers.homeControllerProvider);
 
     return Scaffold(
       body: Stack(children: <Widget>[
@@ -25,7 +28,7 @@ class HomePage extends ConsumerWidget {
                             color: Colors.white,
                             fontSize: 36,
                             fontWeight: FontWeight.bold)),
-                    Text(model.month,
+                    Text(model.month, //Todo month model
                         style: TextStyle(
                             color: Colors.grey[500],
                             fontSize: 24,
@@ -50,7 +53,7 @@ class HomePage extends ConsumerWidget {
   }
 }
 
-class _HomePageState extends State<HomePage> {
-  @override
-  
+abstract class HomeController extends StateNotifier<HomeModel> {
+  HomeController(HomeModel state) : super(state);
+  void fetchCurrencies();
 }
