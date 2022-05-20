@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:http/http.dart';
 
 import '../ui-kit/currency_model.dart';
-import 'BinanceApiRest.dart';
+import 'binance_api_rest.dart';
 
 class BinanceApiRestImpl extends ApiServiceAggregator {
   @override
