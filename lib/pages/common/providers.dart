@@ -13,6 +13,7 @@ final Providers providers = Providers();
 class Providers {
   final Provider<ApiServiceAggregator> apiServiceProvider =
       Provider<ApiServiceAggregator>((ProviderRef _) => BinanceApiRestImpl());
+
   final StateNotifierProvider<NavbarController, NavbarModel>
       navbarControllerProvider =
       StateNotifierProvider<NavbarController, NavbarModel>(

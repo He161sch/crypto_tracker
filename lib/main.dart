@@ -1,4 +1,4 @@
-import 'package:crypto_tracker/widgets/navbar/navbar_view.dart';
+import 'package:crypto_tracker/pages/navigation/navbar_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
