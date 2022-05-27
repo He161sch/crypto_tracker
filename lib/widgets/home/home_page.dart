@@ -4,7 +4,7 @@ import 'package:crypto_tracker/widgets/common/providers.dart';
 import 'package:crypto_tracker/widgets/home/home_model.dart';
 import 'package:crypto_tracker/backend/ui-kit/currency.dart';
 
-class HomePage extends ConsumerWidget {
+class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
   @override
@@ -13,6 +13,13 @@ class HomePage extends ConsumerWidget {
         ref.read(providers.homeControllerProvider.notifier);
     final HomeModel model = ref.watch(providers.homeControllerProvider);
 
+  State<HomePage> createState() => _HomePageState();
+}
+
+
+class _HomePageState extends State<HomePage> {
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(children: <Widget>[
         Container(
@@ -29,6 +36,7 @@ class HomePage extends ConsumerWidget {
                             fontSize: 36,
                             fontWeight: FontWeight.bold)),
                     Text(model.month, //Todo month model
+                    Text("January 5",
                         style: TextStyle(
                             color: Colors.grey[500],
                             fontSize: 24,
@@ -56,4 +64,5 @@ class HomePage extends ConsumerWidget {
 abstract class HomeController extends StateNotifier<HomeModel> {
   HomeController(HomeModel state) : super(state);
   void fetchCurrencies();
+}
 }
