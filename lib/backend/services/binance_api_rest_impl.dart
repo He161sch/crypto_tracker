@@ -19,4 +19,10 @@ class BinanceApiRestImpl extends ApiServiceAggregator {
       throw Exception('Failed to load currencies');
     }
   }
+
+  @override
+  getAllCurrencies() {
+    // TODO: implement getAllCurrencies
+    throw UnimplementedError();
+  }
 }

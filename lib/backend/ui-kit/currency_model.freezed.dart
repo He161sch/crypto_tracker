@@ -22,12 +22,10 @@ CurrencyModel _$CurrencyModelFromJson(Map<String, dynamic> json) {
 class _$CurrencyModelTearOff {
   const _$CurrencyModelTearOff();
 
-  _CurrencyModel call(
-      {required int id, required String name, required Decimal currentPrice}) {
+  _CurrencyModel call({required String symbol, required Decimal price}) {
     return _CurrencyModel(
-      id: id,
-      name: name,
-      currentPrice: currentPrice,
+      symbol: symbol,
+      price: price,
     );
   }
 
@@ -41,9 +39,8 @@ const $CurrencyModel = _$CurrencyModelTearOff();
 
 /// @nodoc
 mixin _$CurrencyModel {
-  int get id => throw _privateConstructorUsedError;
-  String get name => throw _privateConstructorUsedError;
-  Decimal get currentPrice => throw _privateConstructorUsedError;
+  String get symbol => throw _privateConstructorUsedError;
+  Decimal get price => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -56,7 +53,7 @@ abstract class $CurrencyModelCopyWith<$Res> {
   factory $CurrencyModelCopyWith(
           CurrencyModel value, $Res Function(CurrencyModel) then) =
       _$CurrencyModelCopyWithImpl<$Res>;
-  $Res call({int id, String name, Decimal currentPrice});
+  $Res call({String symbol, Decimal price});
 }
 
 /// @nodoc
@@ -70,22 +67,17 @@ class _$CurrencyModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? id = freezed,
-    Object? name = freezed,
-    Object? currentPrice = freezed,
+    Object? symbol = freezed,
+    Object? price = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      name: name == freezed
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
+      symbol: symbol == freezed
+          ? _value.symbol
+          : symbol // ignore: cast_nullable_to_non_nullable
               as String,
-      currentPrice: currentPrice == freezed
-          ? _value.currentPrice
-          : currentPrice // ignore: cast_nullable_to_non_nullable
+      price: price == freezed
+          ? _value.price
+          : price // ignore: cast_nullable_to_non_nullable
               as Decimal,
     ));
   }
@@ -98,7 +90,7 @@ abstract class _$CurrencyModelCopyWith<$Res>
           _CurrencyModel value, $Res Function(_CurrencyModel) then) =
       __$CurrencyModelCopyWithImpl<$Res>;
   @override
-  $Res call({int id, String name, Decimal currentPrice});
+  $Res call({String symbol, Decimal price});
 }
 
 /// @nodoc
@@ -114,22 +106,17 @@ class __$CurrencyModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? id = freezed,
-    Object? name = freezed,
-    Object? currentPrice = freezed,
+    Object? symbol = freezed,
+    Object? price = freezed,
   }) {
     return _then(_CurrencyModel(
-      id: id == freezed
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      name: name == freezed
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
+      symbol: symbol == freezed
+          ? _value.symbol
+          : symbol // ignore: cast_nullable_to_non_nullable
               as String,
-      currentPrice: currentPrice == freezed
-          ? _value.currentPrice
-          : currentPrice // ignore: cast_nullable_to_non_nullable
+      price: price == freezed
+          ? _value.price
+          : price // ignore: cast_nullable_to_non_nullable
               as Decimal,
     ));
   }
@@ -138,22 +125,19 @@ class __$CurrencyModelCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CurrencyModel with DiagnosticableTreeMixin implements _CurrencyModel {
-  const _$_CurrencyModel(
-      {required this.id, required this.name, required this.currentPrice});
+  const _$_CurrencyModel({required this.symbol, required this.price});
 
   factory _$_CurrencyModel.fromJson(Map<String, dynamic> json) =>
       _$$_CurrencyModelFromJson(json);
 
   @override
-  final int id;
+  final String symbol;
   @override
-  final String name;
-  @override
-  final Decimal currentPrice;
+  final Decimal price;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'CurrencyModel(id: $id, name: $name, currentPrice: $currentPrice)';
+    return 'CurrencyModel(symbol: $symbol, price: $price)';
   }
 
   @override
@@ -161,9 +145,8 @@ class _$_CurrencyModel with DiagnosticableTreeMixin implements _CurrencyModel {
     super.debugFillProperties(properties);
     properties
       ..add(DiagnosticsProperty('type', 'CurrencyModel'))
-      ..add(DiagnosticsProperty('id', id))
-      ..add(DiagnosticsProperty('name', name))
-      ..add(DiagnosticsProperty('currentPrice', currentPrice));
+      ..add(DiagnosticsProperty('symbol', symbol))
+      ..add(DiagnosticsProperty('price', price));
   }
 
   @override
@@ -171,18 +154,15 @@ class _$_CurrencyModel with DiagnosticableTreeMixin implements _CurrencyModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _CurrencyModel &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality()
-                .equals(other.currentPrice, currentPrice));
+            const DeepCollectionEquality().equals(other.symbol, symbol) &&
+            const DeepCollectionEquality().equals(other.price, price));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(currentPrice));
+      const DeepCollectionEquality().hash(symbol),
+      const DeepCollectionEquality().hash(price));
 
   @JsonKey(ignore: true)
   @override
@@ -197,19 +177,15 @@ class _$_CurrencyModel with DiagnosticableTreeMixin implements _CurrencyModel {
 
 abstract class _CurrencyModel implements CurrencyModel {
   const factory _CurrencyModel(
-      {required int id,
-      required String name,
-      required Decimal currentPrice}) = _$_CurrencyModel;
+      {required String symbol, required Decimal price}) = _$_CurrencyModel;
 
   factory _CurrencyModel.fromJson(Map<String, dynamic> json) =
       _$_CurrencyModel.fromJson;
 
   @override
-  int get id;
+  String get symbol;
   @override
-  String get name;
-  @override
-  Decimal get currentPrice;
+  Decimal get price;
   @override
   @JsonKey(ignore: true)
   _$CurrencyModelCopyWith<_CurrencyModel> get copyWith =>

@@ -7,10 +7,9 @@ part 'home_model.freezed.dart';
 
 @freezed
 class HomeModel with _$HomeModel {
-  const factory HomeModel({
-    required List<CurrencyModel> currencies,
-    required bool searchedCurrency,
-    required bool isLoading,
-    required bool hasError,
-  }) = _HomeModel;
+  const factory HomeModel(
+      {required List<CurrencyModel> currencies,
+      required bool isLoading,
+      required bool hasError,
+      required String currentDate}) = _HomeModel;
 }

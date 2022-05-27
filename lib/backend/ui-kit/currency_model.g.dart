@@ -8,14 +8,12 @@ part of 'currency_model.dart';
 
 _$_CurrencyModel _$$_CurrencyModelFromJson(Map<String, dynamic> json) =>
     _$_CurrencyModel(
-      id: json['id'] as int,
-      name: json['name'] as String,
-      currentPrice: Decimal.fromJson(json['currentPrice'] as String),
+      symbol: json['symbol'] as String,
+      price: Decimal.fromJson(json['price'] as String),
     );
 
 Map<String, dynamic> _$$_CurrencyModelToJson(_$_CurrencyModel instance) =>
     <String, dynamic>{
-      'id': instance.id,
-      'name': instance.name,
-      'currentPrice': instance.currentPrice,
+      'symbol': instance.symbol,
+      'price': instance.price,
     };

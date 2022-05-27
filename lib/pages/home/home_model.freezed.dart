@@ -20,14 +20,14 @@ class _$HomeModelTearOff {
 
   _HomeModel call(
       {required List<CurrencyModel> currencies,
-      required bool searchedCurrency,
       required bool isLoading,
-      required bool hasError}) {
+      required bool hasError,
+      required String currentDate}) {
     return _HomeModel(
       currencies: currencies,
-      searchedCurrency: searchedCurrency,
       isLoading: isLoading,
       hasError: hasError,
+      currentDate: currentDate,
     );
   }
 }
@@ -38,9 +38,9 @@ const $HomeModel = _$HomeModelTearOff();
 /// @nodoc
 mixin _$HomeModel {
   List<CurrencyModel> get currencies => throw _privateConstructorUsedError;
-  bool get searchedCurrency => throw _privateConstructorUsedError;
   bool get isLoading => throw _privateConstructorUsedError;
   bool get hasError => throw _privateConstructorUsedError;
+  String get currentDate => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $HomeModelCopyWith<HomeModel> get copyWith =>
@@ -53,9 +53,9 @@ abstract class $HomeModelCopyWith<$Res> {
       _$HomeModelCopyWithImpl<$Res>;
   $Res call(
       {List<CurrencyModel> currencies,
-      bool searchedCurrency,
       bool isLoading,
-      bool hasError});
+      bool hasError,
+      String currentDate});
 }
 
 /// @nodoc
@@ -69,19 +69,15 @@ class _$HomeModelCopyWithImpl<$Res> implements $HomeModelCopyWith<$Res> {
   @override
   $Res call({
     Object? currencies = freezed,
-    Object? searchedCurrency = freezed,
     Object? isLoading = freezed,
     Object? hasError = freezed,
+    Object? currentDate = freezed,
   }) {
     return _then(_value.copyWith(
       currencies: currencies == freezed
           ? _value.currencies
           : currencies // ignore: cast_nullable_to_non_nullable
               as List<CurrencyModel>,
-      searchedCurrency: searchedCurrency == freezed
-          ? _value.searchedCurrency
-          : searchedCurrency // ignore: cast_nullable_to_non_nullable
-              as bool,
       isLoading: isLoading == freezed
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
@@ -90,6 +86,10 @@ class _$HomeModelCopyWithImpl<$Res> implements $HomeModelCopyWith<$Res> {
           ? _value.hasError
           : hasError // ignore: cast_nullable_to_non_nullable
               as bool,
+      currentDate: currentDate == freezed
+          ? _value.currentDate
+          : currentDate // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -102,9 +102,9 @@ abstract class _$HomeModelCopyWith<$Res> implements $HomeModelCopyWith<$Res> {
   @override
   $Res call(
       {List<CurrencyModel> currencies,
-      bool searchedCurrency,
       bool isLoading,
-      bool hasError});
+      bool hasError,
+      String currentDate});
 }
 
 /// @nodoc
@@ -119,19 +119,15 @@ class __$HomeModelCopyWithImpl<$Res> extends _$HomeModelCopyWithImpl<$Res>
   @override
   $Res call({
     Object? currencies = freezed,
-    Object? searchedCurrency = freezed,
     Object? isLoading = freezed,
     Object? hasError = freezed,
+    Object? currentDate = freezed,
   }) {
     return _then(_HomeModel(
       currencies: currencies == freezed
           ? _value.currencies
           : currencies // ignore: cast_nullable_to_non_nullable
               as List<CurrencyModel>,
-      searchedCurrency: searchedCurrency == freezed
-          ? _value.searchedCurrency
-          : searchedCurrency // ignore: cast_nullable_to_non_nullable
-              as bool,
       isLoading: isLoading == freezed
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
@@ -140,6 +136,10 @@ class __$HomeModelCopyWithImpl<$Res> extends _$HomeModelCopyWithImpl<$Res>
           ? _value.hasError
           : hasError // ignore: cast_nullable_to_non_nullable
               as bool,
+      currentDate: currentDate == freezed
+          ? _value.currentDate
+          : currentDate // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -149,22 +149,22 @@ class __$HomeModelCopyWithImpl<$Res> extends _$HomeModelCopyWithImpl<$Res>
 class _$_HomeModel implements _HomeModel {
   const _$_HomeModel(
       {required this.currencies,
-      required this.searchedCurrency,
       required this.isLoading,
-      required this.hasError});
+      required this.hasError,
+      required this.currentDate});
 
   @override
   final List<CurrencyModel> currencies;
   @override
-  final bool searchedCurrency;
-  @override
   final bool isLoading;
   @override
   final bool hasError;
+  @override
+  final String currentDate;
 
   @override
   String toString() {
-    return 'HomeModel(currencies: $currencies, searchedCurrency: $searchedCurrency, isLoading: $isLoading, hasError: $hasError)';
+    return 'HomeModel(currencies: $currencies, isLoading: $isLoading, hasError: $hasError, currentDate: $currentDate)';
   }
 
   @override
@@ -174,19 +174,19 @@ class _$_HomeModel implements _HomeModel {
             other is _HomeModel &&
             const DeepCollectionEquality()
                 .equals(other.currencies, currencies) &&
-            const DeepCollectionEquality()
-                .equals(other.searchedCurrency, searchedCurrency) &&
             const DeepCollectionEquality().equals(other.isLoading, isLoading) &&
-            const DeepCollectionEquality().equals(other.hasError, hasError));
+            const DeepCollectionEquality().equals(other.hasError, hasError) &&
+            const DeepCollectionEquality()
+                .equals(other.currentDate, currentDate));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(currencies),
-      const DeepCollectionEquality().hash(searchedCurrency),
       const DeepCollectionEquality().hash(isLoading),
-      const DeepCollectionEquality().hash(hasError));
+      const DeepCollectionEquality().hash(hasError),
+      const DeepCollectionEquality().hash(currentDate));
 
   @JsonKey(ignore: true)
   @override
@@ -197,18 +197,18 @@ class _$_HomeModel implements _HomeModel {
 abstract class _HomeModel implements HomeModel {
   const factory _HomeModel(
       {required List<CurrencyModel> currencies,
-      required bool searchedCurrency,
       required bool isLoading,
-      required bool hasError}) = _$_HomeModel;
+      required bool hasError,
+      required String currentDate}) = _$_HomeModel;
 
   @override
   List<CurrencyModel> get currencies;
   @override
-  bool get searchedCurrency;
-  @override
   bool get isLoading;
   @override
   bool get hasError;
+  @override
+  String get currentDate;
   @override
   @JsonKey(ignore: true)
   _$HomeModelCopyWith<_HomeModel> get copyWith =>

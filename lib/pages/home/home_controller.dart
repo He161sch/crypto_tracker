@@ -25,7 +25,7 @@ class HomeControllerImpl extends HomeController {
   Future<void> _fetchCurrencies() async {
     state = state.copyWith(isLoading: true);
     try {
-      List<CurrencyModel> currencies = await _backendService.getAllCurrencies();
+      List<CurrencyModel> currencies = await _backendService.loadCurrencies();
       state = state.copyWith(
         currencies: currencies,
         isLoading: false,
