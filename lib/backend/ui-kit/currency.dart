@@ -12,10 +12,10 @@ class Currency extends StatelessWidget {
         child: Center(
             child: Row(
           children: [
-            const Text(
-              "Currencies:",
-              style: TextStyle(color: Colors.deepPurpleAccent),
-            ),
+            // const Text(
+            //   "Currencies:",
+            //   style: TextStyle(color: Colors.deepPurpleAccent),
+            // ),
             const SizedBox(
               width: 8,
             ),
