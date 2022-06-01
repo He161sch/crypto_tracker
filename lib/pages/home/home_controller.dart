@@ -1,5 +1,5 @@
 import 'package:crypto_tracker/backend/home/HomeBackendService.dart';
-import 'package:crypto_tracker/backend/ui-kit/currency_model.dart';
+import 'package:crypto_tracker/backend/ui-kit/currency/currency_model.dart';
 import 'package:crypto_tracker/pages/home/home_page.dart';
 import 'package:crypto_tracker/pages/home/home_model.dart';
 import 'package:intl/intl.dart';
