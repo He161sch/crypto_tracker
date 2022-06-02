@@ -19,7 +19,7 @@ class _$HomeModelTearOff {
   const _$HomeModelTearOff();
 
   _HomeModel call(
-      {required List<CurrencyModel> currencies,
+      {required List<PriceChangeCurrencyModel> currencies,
       required bool isLoading,
       required bool hasError,
       required String currentDate}) {
@@ -37,7 +37,8 @@ const $HomeModel = _$HomeModelTearOff();
 
 /// @nodoc
 mixin _$HomeModel {
-  List<CurrencyModel> get currencies => throw _privateConstructorUsedError;
+  List<PriceChangeCurrencyModel> get currencies =>
+      throw _privateConstructorUsedError;
   bool get isLoading => throw _privateConstructorUsedError;
   bool get hasError => throw _privateConstructorUsedError;
   String get currentDate => throw _privateConstructorUsedError;
@@ -52,7 +53,7 @@ abstract class $HomeModelCopyWith<$Res> {
   factory $HomeModelCopyWith(HomeModel value, $Res Function(HomeModel) then) =
       _$HomeModelCopyWithImpl<$Res>;
   $Res call(
-      {List<CurrencyModel> currencies,
+      {List<PriceChangeCurrencyModel> currencies,
       bool isLoading,
       bool hasError,
       String currentDate});
@@ -77,7 +78,7 @@ class _$HomeModelCopyWithImpl<$Res> implements $HomeModelCopyWith<$Res> {
       currencies: currencies == freezed
           ? _value.currencies
           : currencies // ignore: cast_nullable_to_non_nullable
-              as List<CurrencyModel>,
+              as List<PriceChangeCurrencyModel>,
       isLoading: isLoading == freezed
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
@@ -101,7 +102,7 @@ abstract class _$HomeModelCopyWith<$Res> implements $HomeModelCopyWith<$Res> {
       __$HomeModelCopyWithImpl<$Res>;
   @override
   $Res call(
-      {List<CurrencyModel> currencies,
+      {List<PriceChangeCurrencyModel> currencies,
       bool isLoading,
       bool hasError,
       String currentDate});
@@ -127,7 +128,7 @@ class __$HomeModelCopyWithImpl<$Res> extends _$HomeModelCopyWithImpl<$Res>
       currencies: currencies == freezed
           ? _value.currencies
           : currencies // ignore: cast_nullable_to_non_nullable
-              as List<CurrencyModel>,
+              as List<PriceChangeCurrencyModel>,
       isLoading: isLoading == freezed
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
@@ -154,7 +155,7 @@ class _$_HomeModel implements _HomeModel {
       required this.currentDate});
 
   @override
-  final List<CurrencyModel> currencies;
+  final List<PriceChangeCurrencyModel> currencies;
   @override
   final bool isLoading;
   @override
@@ -196,13 +197,13 @@ class _$_HomeModel implements _HomeModel {
 
 abstract class _HomeModel implements HomeModel {
   const factory _HomeModel(
-      {required List<CurrencyModel> currencies,
+      {required List<PriceChangeCurrencyModel> currencies,
       required bool isLoading,
       required bool hasError,
       required String currentDate}) = _$_HomeModel;
 
   @override
-  List<CurrencyModel> get currencies;
+  List<PriceChangeCurrencyModel> get currencies;
   @override
   bool get isLoading;
   @override

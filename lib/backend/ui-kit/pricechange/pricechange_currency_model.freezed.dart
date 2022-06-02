@@ -16,18 +16,18 @@ final _privateConstructorUsedError = UnsupportedError(
 
 PriceChangeCurrencyModel _$PriceChangeCurrencyModelFromJson(
     Map<String, dynamic> json) {
-  return PriceChangeCurrencyModel.fromJson(json);
+  return _PriceChangeCurrencyModel.fromJson(json);
 }
 
 /// @nodoc
 class _$PriceChangeCurrencyModelTearOff {
   const _$PriceChangeCurrencyModelTearOff();
 
-  PriceChangeCurrencyModel call(
+  _PriceChangeCurrencyModel call(
       {required String symbol,
       required Decimal priceChange,
       required Decimal lastPrice}) {
-    return PriceChangeCurrencyModel(
+    return _PriceChangeCurrencyModel(
       symbol: symbol,
       priceChange: priceChange,
       lastPrice: lastPrice,
@@ -95,26 +95,26 @@ class _$PriceChangeCurrencyModelCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class $PriceChangeCurrencyModelCopyWith<$Res>
+abstract class _$PriceChangeCurrencyModelCopyWith<$Res>
     implements $PriceChangeCurrencyModelCopyWith<$Res> {
-  factory $PriceChangeCurrencyModelCopyWith(PriceChangeCurrencyModel value,
-          $Res Function(PriceChangeCurrencyModel) then) =
-      _$PriceChangeCurrencyModelCopyWithImpl<$Res>;
+  factory _$PriceChangeCurrencyModelCopyWith(_PriceChangeCurrencyModel value,
+          $Res Function(_PriceChangeCurrencyModel) then) =
+      __$PriceChangeCurrencyModelCopyWithImpl<$Res>;
   @override
   $Res call({String symbol, Decimal priceChange, Decimal lastPrice});
 }
 
 /// @nodoc
-class _$PriceChangeCurrencyModelCopyWithImpl<$Res>
+class __$PriceChangeCurrencyModelCopyWithImpl<$Res>
     extends _$PriceChangeCurrencyModelCopyWithImpl<$Res>
-    implements $PriceChangeCurrencyModelCopyWith<$Res> {
-  _$PriceChangeCurrencyModelCopyWithImpl(PriceChangeCurrencyModel _value,
-      $Res Function(PriceChangeCurrencyModel) _then)
-      : super(_value, (v) => _then(v as PriceChangeCurrencyModel));
+    implements _$PriceChangeCurrencyModelCopyWith<$Res> {
+  __$PriceChangeCurrencyModelCopyWithImpl(_PriceChangeCurrencyModel _value,
+      $Res Function(_PriceChangeCurrencyModel) _then)
+      : super(_value, (v) => _then(v as _PriceChangeCurrencyModel));
 
   @override
-  PriceChangeCurrencyModel get _value =>
-      super._value as PriceChangeCurrencyModel;
+  _PriceChangeCurrencyModel get _value =>
+      super._value as _PriceChangeCurrencyModel;
 
   @override
   $Res call({
@@ -122,7 +122,7 @@ class _$PriceChangeCurrencyModelCopyWithImpl<$Res>
     Object? priceChange = freezed,
     Object? lastPrice = freezed,
   }) {
-    return _then(PriceChangeCurrencyModel(
+    return _then(_PriceChangeCurrencyModel(
       symbol: symbol == freezed
           ? _value.symbol
           : symbol // ignore: cast_nullable_to_non_nullable
@@ -141,16 +141,16 @@ class _$PriceChangeCurrencyModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$PriceChangeCurrencyModel
+class _$_PriceChangeCurrencyModel
     with DiagnosticableTreeMixin
-    implements PriceChangeCurrencyModel {
-  const _$PriceChangeCurrencyModel(
+    implements _PriceChangeCurrencyModel {
+  const _$_PriceChangeCurrencyModel(
       {required this.symbol,
       required this.priceChange,
       required this.lastPrice});
 
-  factory _$PriceChangeCurrencyModel.fromJson(Map<String, dynamic> json) =>
-      _$$PriceChangeCurrencyModelFromJson(json);
+  factory _$_PriceChangeCurrencyModel.fromJson(Map<String, dynamic> json) =>
+      _$$_PriceChangeCurrencyModelFromJson(json);
 
   @override
   final String symbol;
@@ -178,7 +178,7 @@ class _$PriceChangeCurrencyModel
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is PriceChangeCurrencyModel &&
+            other is _PriceChangeCurrencyModel &&
             const DeepCollectionEquality().equals(other.symbol, symbol) &&
             const DeepCollectionEquality()
                 .equals(other.priceChange, priceChange) &&
@@ -194,24 +194,24 @@ class _$PriceChangeCurrencyModel
 
   @JsonKey(ignore: true)
   @override
-  $PriceChangeCurrencyModelCopyWith<PriceChangeCurrencyModel> get copyWith =>
-      _$PriceChangeCurrencyModelCopyWithImpl<PriceChangeCurrencyModel>(
+  _$PriceChangeCurrencyModelCopyWith<_PriceChangeCurrencyModel> get copyWith =>
+      __$PriceChangeCurrencyModelCopyWithImpl<_PriceChangeCurrencyModel>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PriceChangeCurrencyModelToJson(this);
+    return _$$_PriceChangeCurrencyModelToJson(this);
   }
 }
 
-abstract class PriceChangeCurrencyModel implements PriceChangeCurrencyModel {
-  const factory PriceChangeCurrencyModel(
+abstract class _PriceChangeCurrencyModel implements PriceChangeCurrencyModel {
+  const factory _PriceChangeCurrencyModel(
       {required String symbol,
       required Decimal priceChange,
-      required Decimal lastPrice}) = _$PriceChangeCurrencyModel;
+      required Decimal lastPrice}) = _$_PriceChangeCurrencyModel;
 
-  factory PriceChangeCurrencyModel.fromJson(Map<String, dynamic> json) =
-      _$PriceChangeCurrencyModel.fromJson;
+  factory _PriceChangeCurrencyModel.fromJson(Map<String, dynamic> json) =
+      _$_PriceChangeCurrencyModel.fromJson;
 
   @override
   String get symbol;
@@ -221,6 +221,6 @@ abstract class PriceChangeCurrencyModel implements PriceChangeCurrencyModel {
   Decimal get lastPrice;
   @override
   @JsonKey(ignore: true)
-  $PriceChangeCurrencyModelCopyWith<PriceChangeCurrencyModel> get copyWith =>
+  _$PriceChangeCurrencyModelCopyWith<_PriceChangeCurrencyModel> get copyWith =>
       throw _privateConstructorUsedError;
 }

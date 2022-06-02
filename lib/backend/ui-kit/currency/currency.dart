@@ -1,4 +1,4 @@
-import 'package:crypto_tracker/backend/ui-kit/currency_model.dart';
+import 'package:crypto_tracker/backend/ui-kit/currency/currency_model.dart';
 import 'package:flutter/material.dart';
 
 class Currency extends StatelessWidget {

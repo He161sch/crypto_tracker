@@ -11,7 +11,7 @@ class PriceChangeCurrencyModel with _$PriceChangeCurrencyModel {
     required String symbol,
     required Decimal priceChange,
     required Decimal lastPrice,
-  }) = PriceChangeCurrencyModel;
+  }) = _PriceChangeCurrencyModel;
 
   factory PriceChangeCurrencyModel.fromJson(Map<String, dynamic> json) =>
       _$PriceChangeCurrencyModelFromJson(json);

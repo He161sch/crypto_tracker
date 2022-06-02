@@ -1,5 +1,7 @@
 import 'package:crypto_tracker/backend/home/HomeBackendService.dart';
 import 'package:crypto_tracker/backend/ui-kit/currency/currency_model.dart';
+import 'package:crypto_tracker/backend/ui-kit/pricechange/pricechange_currency_list.dart';
+import 'package:crypto_tracker/backend/ui-kit/pricechange/pricechange_currency_model.dart';
 import 'package:crypto_tracker/pages/home/home_page.dart';
 import 'package:crypto_tracker/pages/home/home_model.dart';
 import 'package:intl/intl.dart';
@@ -25,7 +27,8 @@ class HomeControllerImpl extends HomeController {
   Future<void> _fetchCurrencies() async {
     state = state.copyWith(isLoading: true);
     try {
-      List<CurrencyModel> currencies = await _backendService.loadCurrencies();
+      List<PriceChangeCurrencyModel> currencies =
+          await _backendService.loadPriceChanges();
       state = state.copyWith(
         currencies: currencies,
         isLoading: false,

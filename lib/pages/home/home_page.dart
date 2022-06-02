@@ -1,3 +1,4 @@
+import 'package:crypto_tracker/backend/ui-kit/pricechange/pricechange_currency_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:crypto_tracker/pages/common/providers.dart';
@@ -66,7 +67,7 @@ class HomePage extends ConsumerWidget {
                                 )
                               : SizedBox(
                                   height: MediaQuery.of(context).size.height,
-                                  child: CurrencyList(
+                                  child: PriceChangeCurrencyList(
                                       currencies: model.currencies),
                                 ),
                     ),
