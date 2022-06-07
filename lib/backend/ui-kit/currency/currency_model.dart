@@ -8,9 +8,8 @@ part 'currency_model.g.dart';
 @freezed
 class CurrencyModel with _$CurrencyModel {
   const factory CurrencyModel({
-    required int id,
-    required String name,
-    required Decimal currentPrice,
+    required String symbol,
+    required Decimal price,
   }) = _CurrencyModel;
 
   factory CurrencyModel.fromJson(Map<String, dynamic> json) =>
