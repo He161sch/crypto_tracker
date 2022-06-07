@@ -1,4 +1,5 @@
 import 'package:crypto_tracker/backend/ui-kit/currency/currency_model.dart';
+import 'package:crypto_tracker/backend/ui-kit/details/currency_details.dart';
 import 'package:crypto_tracker/backend/ui-kit/pricechange/pricechange_currency_list.dart';
 import 'package:crypto_tracker/backend/ui-kit/pricechange/pricechange_currency_model.dart';
 import 'package:flutter/material.dart';
@@ -6,13 +7,11 @@ import 'package:flutter/material.dart';
 class PriceChangeCurrency extends StatelessWidget {
   final PriceChangeCurrencyModel pricechange_currency;
 
-  const PriceChangeCurrency(this.pricechange_currency, {Key? key})
-      : super(key: key);
+  const PriceChangeCurrency(this.pricechange_currency, {Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) => Container(
-        padding: const EdgeInsets.all(20),
-        child: Center(
+  Widget build(BuildContext context) => ListTile(
+        title: Center(
             child: Row(
           children: [
             // const Text(
@@ -46,5 +45,9 @@ class PriceChangeCurrency extends StatelessWidget {
             ))
           ],
         )),
+        onTap: () {
+          Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) => CurrencyDetails(currency: pricechange_currency)));
+        },
       );
 }
